@@ -42,7 +42,7 @@ GEM
       public_suffix (>= 2.0.2, < 4.0)
     angularjs-rails (1.6.8)
     arel (8.0.0)
-    autoprefixer-rails (8.4.1)
+    autoprefixer-rails (8.5.0)
       execjs
     babel-source (5.8.35)
     babel-transpiler (0.7.0)

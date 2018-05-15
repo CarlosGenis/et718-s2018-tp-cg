@@ -1,0 +1,48 @@
+<p id="notice"><%= notice %></p>
+<title>Soccer Results</title>
+<div class="hero-section">
+  <div class="hero-section-text">
+    <h1>Soccer</h1>
+    <h5>Here you will find the results of the latest matches across the world</h5>
+  </div>
+</div>
+
+
+
+<h1>Matches</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Home</th>
+      <th>Away</th>
+      <th>Date</th>
+      <th>Key players</th>
+      <th>Competition</th>
+      <th>Goals</th>
+      <th>Result</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @matches.each do |match| %>
+      <tr>
+        <td><%= match.Home %></td>
+        <td><%= match.Away %></td>
+        <td><%= match.Date %></td>
+        <td><%= match.Key_Players %></td>
+        <td><%= match.Competition %></td>
+        <td><%= match.Goals %></td>
+        <td><%= match.Result %></td>
+        <td><%= link_to 'Show', match %></td>
+        <td><%= link_to 'Edit', edit_match_path(match) %></td>
+        <td><%= link_to 'Destroy', match, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Match', new_match_path %>
